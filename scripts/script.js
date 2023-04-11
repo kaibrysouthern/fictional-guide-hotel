@@ -13,7 +13,7 @@ $(function () {
 
   $("input[type=radio]").on("change", function () {
 
-    let radioChoice = $("input[type=radio]:checked").val(); // A or B
+    let radioChoice = $("input[type=radio]:checked").val(); 
     let newWordList = getWords(radioChoice);
     console.log(newWordList);
 
@@ -37,21 +37,18 @@ $(function () {
     "input[type=radio]:checked"
   ).val()} " }`;
 
-  // display data from that input
-
   console.log(dataStuff);
-
-  // do that suff 2x
 });
 
+
+//Selection Responses
 function getWords(letter) {
 console.log("in f/n getWords, here the paramter: ", letter);
 
-let aWordArray = ["Choose a dessert", "Chocolate Chip Cookies", "Strawberry Cupcakes", "Double Chocolate Fudge Brownies"];
-let bWordArray = ["Vanilla Ice Cream", "Cheesecake", "Peanut Butter Milkshake"];
-let cWordArray = ["Fudge", "Candy Bars", "Lollipops"];
+let aWordArray = ["Select a treat!", "Chocolate Chip Cookies", "Strawberry Cupcakes", "Double Chocolate Fudge Brownies"];
+let bWordArray = ["Select a treat!", "Vanilla Ice Cream", "Cheesecake", "Peanut Butter Milkshake"];
+let cWordArray = ["Select a treat!", "Fudge", "Candy Bars", "Lollipops"];
 
-//todo: change to a switch/case ctrl structure.
 
 if (letter === "A") {
   return aWordArray;
