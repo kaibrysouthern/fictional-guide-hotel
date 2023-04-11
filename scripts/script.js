@@ -1,8 +1,8 @@
 $(function () {
   
-  let userData = ["barry", "somethinglese"];
+  let userData = ["placeholder", "other"];
   let userJSON = {
-    email: "barry email address",
+    email: "email address",
   };
 
   $("#loadData").click(() => {
@@ -60,6 +60,6 @@ if (letter === "A") {
 } else if (letter === "C") {
   return cWordArray;
 } else {
-  return ["please select a letter"];
+  return ["Please select a letter!"];
 }
 }
