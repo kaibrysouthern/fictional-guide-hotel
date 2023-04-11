@@ -1,38 +1,65 @@
 $(function () {
-  //what radio value did they select?
+  
+  let userData = ["barry", "somethinglese"];
+  let userJSON = {
+    email: "barry email address",
+  };
 
-  $("#formSubmit").on("click", (e) => {
-    //ii. Package the data
-    
-    e.preventDefault();
-    
+  $("#loadData").click(() => {
+    console.log("in button click event");
 
-
-
+    $("#email").val(userJSON.email);
   });
 
   $("input[type=radio]").on("change", function () {
 
-    let radioChoice = $("input[type=radio]:checked").val(); 
+    let radioChoice = $("input[type=radio]:checked").val(); // A or B
+    let newWordList = getWords(radioChoice);
+    console.log(newWordList);
 
-    if (radioChoice === "Baked Goods!") {
-      $("#letterWordsSelect")
-        .empty()
-        .append(`<option value="Chocolate Chip Cookies">Baked Goods!</option>`)
-        .append(`<option value="Strawberry Cupcakes">Baked Goods!2</option>`)
-        .append(`<option value="Double Chocolate Fudge Brownies">Baked Goods!3</option>`);
-    } else if (radioChoice === "Cold Desserts!") {
-      //`<option value="${optValue}">${optText}</option>`
+    let optionList = "";
 
-      $("#letterWordsSelect")
-        .empty()
-        .append(`<option value="Vanilla Ice Cream">Chocolate Chip Cookies</option>`)
-        .append(`<option value="Cheesecake">Strawberry Cupcakes</option>`)
-        .append(`<option value="Peanut Butter Milkshake">Double Chocolate Fudge Brownies</option>`);
-    } else {
-      $("#letterWordsSelect")
-        .empty()
-        .append(`<option value="Chocolate Chip Cookies">Select a treat!`);
+    for (i = 0; i < newWordList.length; i++) {
+      optionList += `<option value=" ${newWordList[i]} ">${newWordList[i]} </option>`;
     }
-  );
-);
+    console.log(optionList);
+
+    $("#letterWordsSelect").empty().append(optionList);
+  });
+
+  $("#formSubmit").on("click", (e) => {
+    e.preventDefault();
+    console.log("clicked the button");
+
+  });
+
+  let dataStuff = `{ "letterSelected:" " ${$(
+    "input[type=radio]:checked"
+  ).val()} " }`;
+
+  // display data from that input
+
+  console.log(dataStuff);
+
+  // do that suff 2x
+});
+
+function getWords(letter) {
+console.log("in f/n getWords, here the paramter: ", letter);
+
+let aWordArray = ["apple", "ant", "a"];
+let bWordArray = ["bananan", "brains", "bbbq"];
+let cWordArray = ["cat", "cactus", "charlie"];
+
+//todo: change to a switch/case ctrl structure.
+
+if (letter === "A") {
+  return aWordArray;
+} else if (letter === "B") {
+  return bWordArray;
+} else if (letter === "C") {
+  return cWordArray;
+} else {
+  return ["please select a letter"];
+}
+}
