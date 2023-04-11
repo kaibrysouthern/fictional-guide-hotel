@@ -6,17 +6,7 @@ $(function () {
     
     e.preventDefault();
     
-    alert(
-      
-    //{`   "firstName": "John",
-    //"lastName": "Doe",
-    //"age": 25,
-    //"zipCode": "87946",
-    //"language": "html"`
 
-
-
-    );
 
 
   });
