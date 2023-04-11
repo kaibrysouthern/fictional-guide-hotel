@@ -47,9 +47,9 @@ $(function () {
 function getWords(letter) {
 console.log("in f/n getWords, here the paramter: ", letter);
 
-let aWordArray = ["apple", "ant", "a"];
-let bWordArray = ["bananan", "brains", "bbbq"];
-let cWordArray = ["cat", "cactus", "charlie"];
+let aWordArray = ["Chocolate Chip Cookies", "Strawberry Cupcakes", "Double Chocolate Fudge Brownies"];
+let bWordArray = ["Vanilla Ice Cream", "Cheesecake", "Peanut Butter Milkshake"];
+let cWordArray = ["Fudge", "Candy Bars", "Lollipops"];
 
 //todo: change to a switch/case ctrl structure.
 
