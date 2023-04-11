@@ -47,7 +47,7 @@ $(function () {
 function getWords(letter) {
 console.log("in f/n getWords, here the paramter: ", letter);
 
-let aWordArray = ["Chocolate Chip Cookies", "Strawberry Cupcakes", "Double Chocolate Fudge Brownies"];
+let aWordArray = ["Choose a dessert", "Chocolate Chip Cookies", "Strawberry Cupcakes", "Double Chocolate Fudge Brownies"];
 let bWordArray = ["Vanilla Ice Cream", "Cheesecake", "Peanut Butter Milkshake"];
 let cWordArray = ["Fudge", "Candy Bars", "Lollipops"];
 
