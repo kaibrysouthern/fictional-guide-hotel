@@ -8,11 +8,11 @@ $(function () {
     
     alert(
       
-    {`   "firstName": "John",
-    "lastName": "Doe",
-    "age": 25,
-    "zipCode": "87946",
-    "language": "html"`
+    //{`   "firstName": "John",
+    //"lastName": "Doe",
+    //"age": 25,
+    //"zipCode": "87946",
+    //"language": "html"`
 
 
 
@@ -28,9 +28,9 @@ $(function () {
     if (radioChoice === "Baked Goods!") {
       $("#letterWordsSelect")
         .empty()
-        .append(`<option value="Chocolate Chip Cookies">A</option>`)
-        .append(`<option value="Strawberry Cupcakes">AA</option>`)
-        .append(`<option value="Double Chocolate Fudge Brownies">AAA</option>`);
+        .append(`<option value="Chocolate Chip Cookies">Baked Goods!</option>`)
+        .append(`<option value="Strawberry Cupcakes">Baked Goods!2</option>`)
+        .append(`<option value="Double Chocolate Fudge Brownies">Baked Goods!3</option>`);
     } else if (radioChoice === "Cold Desserts!") {
       //`<option value="${optValue}">${optText}</option>`
 
@@ -44,5 +44,5 @@ $(function () {
         .empty()
         .append(`<option value="Chocolate Chip Cookies">Select a treat!`);
     }
-  )
-  };
+  );
+);
