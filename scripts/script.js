@@ -59,4 +59,11 @@ if (letter === "A") {
 } else {
   return ["Please select a letter!"];
 }
+
 }
+function refreshPage(){
+  $("#row").html("");
+  var getValue = document.getElementById("loadData");
+    if (getValue.value !="") {
+      getValue.value = "";
+    }}
